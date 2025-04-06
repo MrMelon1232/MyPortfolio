@@ -9,3 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Catch error
     .catch((error) => console.error("Error loading navbar:", error));
 });
+
+// Function to open navbar menu
+function openNavbarMenu() {
+  var menuBtn = document.getElementById("navMenu");
+
+  // Display responsive navbar
+  if (menuBtn.className === "nav-menu") {
+    menuBtn.className += " responsive";
+  } else {
+    menuBtn.className = "nav-menu";
+  }
+}

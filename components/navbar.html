@@ -1,6 +1,35 @@
-<div class="scrollmenu">
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-  <a href="projects">Projects</a>
-</div>
+<nav id="header">
+  <div class="nav-logo">
+    <img src="assets/icons/favicon.png" alt="logo" />
+  </div>
+
+  <!-- Navbar menu for pages -->
+  <div class="nav-menu" id="navMenu">
+    <ul class="nav_menu_list">
+      <li class="nav_list">
+        <a href="#home" class="nav-link">Home</a>
+        <div class="circle"></div>
+      </li>
+      <li class="nav_list">
+        <a href="#about" class="nav-link">About</a>
+        <div class="circle"></div>
+      </li>
+      <li class="nav_list">
+        <a href="#projects" class="nav-link">Projects</a>
+        <div class="circle"></div>
+      </li>
+      <li class="nav_list">
+        <a href="#contact" class="nav-link">Contact</a>
+        <div class="circle"></div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Navbar CV option-->
+  <div class="nav-button">
+    <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+  </div>
+  <div class="nav-menu-btn">
+    <i class="uil uil-bars" onclick="openNavbarMenu()"></i>
+  </div>
+</nav>
