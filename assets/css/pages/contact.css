@@ -1,0 +1,75 @@
+/* Contact info box */
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+}
+
+.col {
+  display: flex;
+  width: 50%;
+}
+
+.contact-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  height: 315;
+  width: 100%;
+  background: var(--second-color);
+  border-radius: 10px;
+  box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+}
+
+.contact-info > h2 {
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+.contact-info > p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-white);
+  margin-block: 5px;
+}
+
+.contact-info p > i {
+  font-size: 18px;
+}
+
+.contact-info::after {
+  background: var(--color-white);
+}
+
+.contact-info:hover.contact-info h2,
+.contact-info:hover.contact-info p,
+.contact-info:hover .contact-info i {
+  color: #777;
+  z-index: 2;
+}
+
+.contact-info:hover.contact.info::after {
+  bottom: 0;
+}
+
+/* Media view for responsive design | 900px */
+@media only screen and (max-width: 900px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .col {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
