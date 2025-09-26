@@ -1,42 +1,45 @@
 // Fetch our navbar component to render it
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("components/navbar.html")
-    .then((response) => response.text())
-    .then((data) => {
-      document.getElementById("navbar-container").innerHTML = data;
-    })
+    fetch("components/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+            document.getElementById("navbar-page").innerHTML = data;
+        })
 
-    // Catch error
-    .catch((error) => console.error("Error loading navbar:", error));
+        // Catch error
+        .catch((error) => console.error("Error loading navbar:", error));
 });
 
 // Function to open navbar menu
 function openNavbarMenu() {
-  var menuBtn = document.getElementById("navMenu");
+    var menuBtn = document.getElementById("navMenu");
 
-  // Display responsive navbar
-  if (menuBtn.className === "nav-menu") {
-    menuBtn.className += " responsive";
-  } else {
-    menuBtn.className = "nav-menu";
-  }
+    // Display responsive navbar
+    if (menuBtn.className === "nav-menu") {
+        menuBtn.className += " responsive";
+    } else {
+        menuBtn.className = "nav-menu";
+    }
 }
 
 // Add shadow for navbar when scrolling down the page
-window.onscroll = function() {headerShadow()};
+window.onscroll = function () {
+    headerShadow();
+};
 
 function headerShadow() {
-  const navHeader = document.getElementById("header");
+    const navHeader = document.getElementById("header");
 
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
-    navHeader.style.height = "70px";
-    navHeader.style.lineHeight = "70px";
-  }
-  else {
-    navHeader.style.boxShadow = "none";
-    navHeader.style.height = "90px";
-    navHeader.style.lineHeight = "90px";
-  }
-
+    if (
+        document.body.scrollTop > 50 ||
+        document.documentElement.scrollTop > 50
+    ) {
+        navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
+        navHeader.style.height = "70px";
+        navHeader.style.lineHeight = "70px";
+    } else {
+        navHeader.style.boxShadow = "none";
+        navHeader.style.height = "90px";
+        navHeader.style.lineHeight = "90px";
+    }
 }
