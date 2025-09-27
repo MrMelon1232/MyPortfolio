@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("pages/home.html")
         .then((response) => response.text())
         .then((data) => {
-            document.getElementById("home-page").innerHTML = data;
+            document.getElementById("home").innerHTML = data;
         })
 
         // Catch error
