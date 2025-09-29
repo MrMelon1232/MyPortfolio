@@ -9,7 +9,7 @@
     --text-color-third: rgb(153, 122, 80); /* muted earthy accent text */
     --first-color: rgb(186, 140, 99); /* warm leather brown */
     --first-color-hover: rgb(168, 120, 82); /* deeper brown on hover */
-    --second-color: rgb(118, 150, 86); /* olive green accent */
+    --second-color: rgb(80, 100, 58); /* olive green accent */
     --third-color: rgb(198, 164, 109); /* muted golden sand */
     --first-shadow-color: rgba(0, 0, 0, 0.5);
 }
@@ -30,28 +30,32 @@ html {
 /* Scroll Bar */
 ::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
     border-radius: 25px;
 }
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--body-color);
 }
 ::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background: var(--first-color);
     border-radius: 30px;
+    border: 2px solid var(--body-color);
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #bbb;
+    background: var(--first-color-hover);
 }
 
 /* Global buttons */
 .btn {
     font-weight: 500;
     padding: 12px 20px;
-    background: #efefef;
+    background: var(--first-color);
+    color: var(--color-white);
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: 0.4s;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .btn > i {
@@ -59,8 +63,18 @@ html {
 }
 
 .btn:hover {
-    background: var(--second-color);
+    background: var(--first-color-hover); /* deeper brown */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary {
+    background: var(--second-color); /* olive green */
     color: var(--color-white);
+}
+
+.btn-secondary:hover {
+    background: rgb(98, 128, 72); /* darker olive */
 }
 
 /* Global Icons */
