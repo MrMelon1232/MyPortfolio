@@ -48,28 +48,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section[id]");
 
     // Function to change active link on scroll
-    // Function to change active link on scroll
     function scrollActive() {
         const scrollY = window.scrollY;
+        const header = document.getElementById("header");
+        const headerHeight = header ? header.offsetHeight : 0;
 
-        // Get each section and determine position, height
+        // Position to trigger the active link change (30% of viewport height)
+        const checkpoint = scrollY + window.innerHeight * 0.3;
+
         sections.forEach((current) => {
-            const sectionHeight = current.offsetHeight,
-                sectionTop = current.offsetTop - 50,
-                sectionId = current.getAttribute("id");
+            const sectionTop = current.offsetTop - headerHeight;
+            const sectionHeight = current.offsetHeight;
+            const sectionId = current.getAttribute("id");
 
-            // If scroll is within section, add active class to corresponding link
             const link = document.querySelector(
-                ".nav-menu a[href*=" + sectionId + "]"
+                `.nav-menu a[href*="#${sectionId}"]`
             );
+
             if (link) {
                 if (
-                    scrollY > sectionTop &&
-                    scrollY <= sectionTop + sectionHeight
+                    checkpoint >= sectionTop &&
+                    checkpoint < sectionTop + sectionHeight
                 ) {
                     link.classList.add("active-link");
                 } else {
-                    link.classList.remove("active-link"); // <-- should be remove
+                    link.classList.remove("active-link");
                 }
             }
         });
