@@ -1,12 +1,48 @@
 footer {
+    background: #111; /* dark background for contrast */
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    row-gap: 30px;
-    background: #f8f8f8;
-    padding-block: 40px 60px;
+    margin-top: 10px;
 }
 
-.top-footer {
+.footer-social-icons i {
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* responsive logo size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-icons a {
+    text-decoration: none;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    color: #bbb;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-social-icons a:hover {
+    color: var(--first-color);
+    transform: scale(1.1);
+}
+
+.footer-copy {
+    font-size: 0.85rem;
+    color: #888;
 }
