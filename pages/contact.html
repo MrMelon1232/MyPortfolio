@@ -15,24 +15,51 @@
             </div>
         </div>
         <div class="col">
-            <div class="form-control">
+            <form
+                id="contact-form"
+                class="form-control"
+                action="https://formspree.io/f/mldpbzag"
+                method="POST"
+            >
                 <div class="form-inputs">
-                    <input type="text" class="input-field" placeholder="Name" />
                     <input
                         type="text"
                         class="input-field"
+                        name="name"
+                        placeholder="Name"
+                        required
+                    />
+                    <input
+                        type="email"
+                        class="input-field"
+                        name="email"
                         placeholder="Email"
+                        required
+                    />
+                </div>
+                <div class="form-inputs">
+                    <input
+                        type="text"
+                        class="input-field-title"
+                        name="title"
+                        placeholder="Title"
+                        required
                     />
                 </div>
                 <div class="text-area">
-                    <textarea placeholder="Message"></textarea>
+                    <textarea
+                        name="message"
+                        placeholder="Message"
+                        required
+                    ></textarea>
                 </div>
                 <div class="form-button">
-                    <button class="btn">
+                    <button type="submit" class="btn">
                         Send <i class="uil uil-message"></i>
                     </button>
                 </div>
-            </div>
+                <p id="form-status"></p>
+            </form>
         </div>
     </div>
 </section>
