@@ -1,4 +1,4 @@
-// Fetch our home page to render it
+// Fetch our projects page to render it
 document.addEventListener("DOMContentLoaded", function () {
     fetch("pages/projects.html")
         .then((response) => response.text())

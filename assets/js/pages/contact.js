@@ -1,4 +1,4 @@
-// Fetch our home page to render it
+// Fetch our contact page to render it
 document.addEventListener("DOMContentLoaded", function () {
     fetch("pages/contact.html")
         .then((response) => response.text())
