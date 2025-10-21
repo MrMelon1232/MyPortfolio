@@ -188,6 +188,10 @@
         width: 150px;
         height: 150px;
     }
+
+    .scroll-icon-box {
+        padding-top: 20px;
+    }
 }
 
 /* Media view for responsive design | 1024px */
