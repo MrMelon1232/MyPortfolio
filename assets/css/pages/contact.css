@@ -18,6 +18,18 @@
     margin-bottom: 20px;
 }
 
+.email-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.email-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
 .contact-info > p {
     display: flex;
     align-items: center;
@@ -34,11 +46,12 @@
     background: var(--color-white);
 }
 
-.contact-info:hover.contact-info h2,
-.contact-info:hover.contact-info p,
-.contact-info:hover .contact-info i {
-    color: #777;
-    z-index: 2;
+.contact-info:hover h2,
+.contact-info:hover p,
+.contact-info:hover i,
+.contact-info:hover .email-link {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.25s ease-in-out;
 }
 
 .contact-info:hover.contact.info::after {
