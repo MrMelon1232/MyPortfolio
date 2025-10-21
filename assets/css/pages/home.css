@@ -5,8 +5,8 @@
     align-items: center;
     justify-content: center;
     gap: 80px;
-    height: 100dvh;
-    min-height: 700px;
+    min-height: 100dvh;
+    flex-wrap: wrap;
 }
 
 /* Featured text */
@@ -15,11 +15,11 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    min-height: 80vh;
+    min-height: auto;
     flex-direction: column;
     flex: 1;
-    min-width: 300px; /* stops them from shrinking too tiny */
-    padding-left: 20px;
+    min-width: 300px;
+    padding: 20px;
 }
 
 .featured-text-card span {
@@ -154,8 +154,13 @@
 @media only screen and (max-width: 900px) {
     .featured-box {
         flex-direction: column;
-        justify-content: center;
-        height: 100vh;
+        gap: 40px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .featured-name {
+        font-size: 40px;
     }
 
     .featured-text {
