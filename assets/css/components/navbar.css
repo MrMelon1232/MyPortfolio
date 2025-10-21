@@ -94,12 +94,22 @@ nav {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(255, 255, 255, 0, 7);
+        background: rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.18);
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         width: 100%;
         min-height: 450px;
         height: 100vh;
         transition: 0.3s;
+    }
+
+    .nav-link {
+        color: black;
+    }
+
+    .nav-link:hover {
+        color: var(--first-color); /* keep your highlight color */
     }
 
     .nav_menu_list {
@@ -111,5 +121,9 @@ nav {
         align-items: center;
         justify-content: center;
         color: var(--first-color);
+    }
+
+    body {
+        background-color: var(--body-color);
     }
 }
